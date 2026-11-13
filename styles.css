@@ -2,3 +2,98 @@
 .certificate{margin:0 0 28px}.certificate img{display:block;width:100%;height:auto;border:1px solid #bec5b4;margin:15px 0}.certificate figcaption{font-size:12px;color:var(--muted);margin:15px 0}.certificate>.quiet{display:block;margin-top:14px}
 @media(max-width:700px){.site-header nav{flex-wrap:wrap;gap:4px 20px;overflow:visible}.site-header nav a{padding:7px 0}}
 .lead-panel{margin-top:28px;background:#fff9ec;border:1px solid #dfcfaa;border-radius:8px;padding:34px 38px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.75fr);gap:46px;align-items:start}.lead-panel h2{font-size:34px}.lead-copy>p:not(.caution){color:#536057;max-width:700px}.lead-panel .primary{margin-top:6px}.lead-timeline{border-left:1px solid #d9c99f;padding-left:30px}.lead-date{display:grid;grid-template-columns:78px 1fr;gap:13px;padding:0 0 18px;margin-bottom:18px;border-bottom:1px solid #eadfca}.lead-date:last-of-type{margin-bottom:8px}.lead-date strong{font:24px/1.1 var(--serif);color:#80632f}.lead-date span{font-size:12px;color:var(--muted)}.lead-timeline details{margin-top:18px}@media(max-width:850px){.lead-panel{grid-template-columns:1fr;gap:28px}.lead-timeline{border-left:0;border-top:1px solid #d9c99f;padding:24px 0 0}}@media(max-width:700px){.lead-panel{padding:25px 20px}.lead-panel h2{font-size:29px}.lead-date{grid-template-columns:72px 1fr}}
+
+.hero {
+  display: block;
+  padding: clamp(2rem, 5vw, 4.5rem) 0 1.75rem;
+}
+.hero h1 { font-size: clamp(2.3rem, 6vw, 4rem); }
+.hero p { max-width: 44rem; font-size: 1.05rem; }
+.tree-panel > h2 { margin-bottom: 1.25rem; }
+.tree-note { margin-bottom: 0; }
+.person-node { min-height: 0; }
+.person-node p { font-size: .9rem; }
+.tree-instructions { color: var(--muted); font-size: .95rem; }
+.tree-row { align-items: start; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tree-row.couple:after { top: 2.75rem; }
+.tree-member { min-width: 0; }
+.ancestral-pair { min-width: 0; }
+.ancestral-pair .tree-row { gap: .6rem; }
+.ancestral-pair .tree-row > .tree-member { min-width: 0; }
+.ancestral-pair .tree-row .person-node { padding: .8rem; }
+.ancestral-pair .tree-row .person-node h3 { font-size: 1.15rem; }
+.ancestral-pair .tree-row .person-node p { font-size: .8rem; }
+.ancestral-descent {
+  width: 50%;
+  height: 1.15rem;
+  margin: 0 auto;
+  border-inline: 1px dashed #819777;
+  border-bottom: 1px dashed #819777;
+}
+.ancestral-descent::after {
+  content: "";
+  display: block;
+  margin: 1.1rem auto 0;
+  height: .75rem;
+  width: 1px;
+  border-left: 1px dashed #819777;
+}
+.ancestral-pair > .tree-member { margin-top: .75rem; }
+.ancestry-connection { position: relative; padding-top: .8rem; }
+.ancestry-connection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(25% - 11.5px);
+  right: calc(25% - 11.5px);
+  height: .8rem;
+  border-right: 1px dashed #819777;
+  border-bottom: 1px dashed #819777;
+}
+.sponsor-note { margin: .75rem 0 0; }
+.tree-spouse { font-size: .85rem; margin: .5rem 0 0; }
+.tree-branches { margin-top: .5rem; }
+.tree-branch {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  margin: .4rem 0 0;
+}
+.tree-branch > summary { padding: .55rem .75rem; }
+.tree-branch > ul { list-style: none; margin: 0; padding: 0 .75rem .65rem; }
+.tree-branch li { padding: .6rem 0 .2rem; border-top: 1px solid var(--line); overflow-wrap: anywhere; }
+.tree-relationship { display: block; font-size: .8rem; color: var(--muted); }
+.tree-evidence { margin: .35rem 0; }
+.tree-evidence p { margin: .45rem 0; font-size: .875rem; }
+.tree-branch .tree-branch > ul { padding-inline: .45rem; }
+.parentage { margin-top: 2rem; }
+.detail-layout .parentage { margin-top: 0; }
+.parentage h3 { font-size: 1.45rem; }
+.parentage h4 { font: 600 1rem/1.45 var(--sans, system-ui, sans-serif); margin: 0 0 .4rem; }
+.parentage .panel p, .claim > p, .event-body > p { font-size: 1rem; }
+.parentage-note { border-top: 1px solid var(--line); margin-top: .9rem; padding-top: .9rem; }
+.parentage-note .source-ref { padding: .45rem 0; }
+.related-links { display: flex; flex-wrap: wrap; gap: .45rem 1rem; margin-top: .8rem; }
+.related-links a, summary { font-size: .9rem; }
+.event-body h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-bottom: .5rem; }
+.event-body { padding-bottom: 1.75rem; }
+details.panel > summary { font-size: 1rem; }
+.page-heading > p { overflow-wrap: anywhere; }
+
+@media (max-width: 700px) {
+  .tree-row { grid-template-columns: minmax(0, 1fr); }
+  .tree-row.ancestry { gap: 1.15rem; }
+  .ancestry-connection { padding-top: 0; }
+  .ancestry-connection::before { display: none; }
+  .tree-row.couple .tree-member + .tree-member { margin-left: 1rem; }
+  .tree-row.couple .tree-member + .tree-member > .person-node { border-left: 3px solid #afbea1; }
+  .tree-row.parents { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tree-row.parents .person-node { padding: .8rem; }
+  .tree-row.parents .person-node h3 { font-size: 1.2rem; }
+  .tree-row.parents .person-node p { font-size: .8rem; }
+  .segmented { flex-wrap: wrap; }
+  .segmented button { padding: .55rem .65rem; white-space: nowrap; }
+  .event, .detail-layout .event { display: block; border-left: 1px solid var(--line); padding-left: 1rem; }
+  .event-date { border: 0; text-align: left; padding: 0 0 .35rem; }
+  .event-date i { left: calc(-1rem - 5px); right: auto; top: .2rem; }
+}
